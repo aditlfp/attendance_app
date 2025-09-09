@@ -20,7 +20,11 @@ export function AuthProvider({ children }) {
     return unsubscribe;
   }, []);
 
-  const value = { currentUser };
+  const value = { 
+    currentUser,
+    loading
+  };
+  
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}

@@ -46,10 +46,15 @@ body {
 }
 
 .location-info {
-  margin: 1rem 0;
-  padding: 0.5rem;
-  background: #f9f9f9;
-  border-radius: 4px;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.location-info h3 {
+  margin-top: 0;
+  color: #333;
 }
 
 .login-container {
@@ -72,4 +77,780 @@ body {
 .error {
   color: red;
   margin: 1rem 0;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.attendance-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.records-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.record-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 1rem;
+}
+
+.record-details {
+  font-size: 0.9rem;
+}
+
+.record-details p {
+  margin: 0.25rem 0;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-nav button {
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dashboard-nav button:hover {
+  background: #f0f0f0;
+}
+
+.dashboard-nav button.active {
+  background: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.dashboard-nav button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.enrollment-reminder {
+  text-align: center;
+  padding: 1rem;
+  background: #fff3cd;
+  color: #856404;
+  border-top: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.enrollment-container, .attendance-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.success-message {
+  color: #4caf50;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  border-left: 4px solid #4caf50;
+  text-align: center;
+}
+
+
+.instructions {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.instructions h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.instructions ul {
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.progress-message {
+  color: #2196f3;
+  background: rgba(33, 150, 243, 0.1);
+  padding: 12px;
+  border-radius: 4px;
+  margin: 15px 0;
+  border-left: 4px solid #2196f3;
+  font-weight: 500;
+}
+
+
+.enrollment-progress {
+  margin: 20px 0;
+  text-align: center;
+}
+
+
+.enroll-btn, .capture-btn {
+  padding: 12px 24px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.enroll-btn:hover, .capture-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.enroll-btn:disabled, .capture-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.progress-bar {
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4a90e2;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.reset-btn {
+  padding: 12px 24px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+
+.reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+
+
+.current-instruction {
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  color: #1976d2;
+}
+
+.current-instruction h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.camera-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+  width: 640px;
+  height: 480px;
+}
+
+.camera-container video {
+  transform: scaleX(-1); /* Mirror the video horizontally */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.face-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  transform: scaleX(-1); /* Mirror the overlay to match the video */
+}
+
+.face-guide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.face-guide::before {
+  content: "Position your face here";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.attendance-history {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.attendance-history h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.records-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.record-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.record-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.record-date {
+  font-weight: 600;
+  color: #333;
+}
+
+.record-similarity {
+  background: #4a90e2;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.record-content {
+  display: flex;
+  padding: 15px;
+}
+
+.record-image {
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.record-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.record-details {
+  flex: 1;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.detail-label {
+  flex: 0 0 100px;
+  font-weight: 500;
+  color: #666;
+}
+
+.detail-value {
+  flex: 1;
+  color: #333;
+}
+
+.loading, .no-records {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-nav button {
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.dashboard-nav button:hover {
+  background: #f0f0f0;
+}
+
+.dashboard-nav button.active {
+  background: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.dashboard-nav button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.enrollment-reminder {
+  text-align: center;
+  padding: 1rem;
+  background: #fff3cd;
+  color: #856404;
+  border-top: 1px solid #ddd;
+  font-weight: bold;
+}
+
+/* Register and Login Page Styles */
+.register-container, .login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.register-form, .login-form {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form h2, .login-form h2 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.register-subtitle, .login-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.register-btn, .login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover, .login-btn:hover {
+  background: #3a7bc8;
+}
+
+.register-btn:disabled, .login-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.register-footer, .login-footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+}
+
+.register-footer a, .login-footer a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-footer a:hover, .login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.camera-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  aspect-ratio: 4/3;
+}
+
+.camera-container video {
+  transform: scaleX(-1);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.face-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  transform: scaleX(-1);
+}
+
+.face-guide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.face-guide::before {
+  content: "Position your face here";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .camera-container {
+    max-width: 100%;
+    aspect-ratio: 3/4;
+    margin: 0 auto;
+  }
+  
+  .face-guide {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .face-guide::before {
+    font-size: 10px;
+    padding: 3px 6px;
+    margin-top: 6px;
+  }
+  
+  /* Adjust button sizes for mobile */
+  .enroll-btn, .capture-btn, .reset-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .button-container button {
+    width: 100%;
+  }
+  
+  /* Adjust container padding */
+  .enrollment-container, .attendance-container {
+    padding: 15px;
+  }
+  
+  /* Adjust text sizes */
+  h2 {
+    font-size: 20px;
+  }
+  
+  .current-instruction h3 {
+    font-size: 16px;
+  }
+  
+  /* Adjust record cards for mobile */
+  .record-content {
+    flex-direction: column;
+  }
+  
+  .record-image {
+    flex: 0 0 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    margin-bottom: 6px;
+  }
+  
+  .detail-label {
+    flex: none;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .camera-container {
+    aspect-ratio: 9/16;
+  }
+  
+  .face-guide {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .face-guide::before {
+    font-size: 9px;
+    padding: 2px 5px;
+    margin-top: 5px;
+  }
+  
+  /* Further reduce button sizes */
+  .enroll-btn, .capture-btn, .reset-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  /* Reduce container padding */
+  .enrollment-container, .attendance-container {
+    padding: 10px;
+  }
+  
+  /* Adjust text sizes */
+  h2 {
+    font-size: 18px;
+  }
+  
+  .current-instruction h3 {
+    font-size: 14px;
+  }
+  
+  /* Make instructions more compact */
+  .instructions {
+    padding: 15px;
+  }
+  
+  .instructions h3 {
+    font-size: 16px;
+  }
+  
+  .instructions li {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .camera-container {
+    max-width: 500px;
+  }
+  
+  .face-guide {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.attempts-info {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.attempts-info p {
+  margin: 0;
+  color: #495057;
+}
+
+.attempts-info.warning {
+  background: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.attempts-info.danger {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.warning-message {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin: 15px 0;
+  color: #856404;
 }
